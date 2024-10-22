@@ -23,13 +23,13 @@ jobs:
             echo $(node --version)
             echo "NPM --version" 
             echo $(npm --version)
-            npm run frontend:install
+            npm install --legacy-peer-deps
       # TODO: Install dependencies in the the backend API          
       - run:
           name: Install API Dependencies
           command: |
-           echo "TODO: Install dependencies in the the backend API  "
-           npm run api:install
+            echo "TODO: Install dependencies in the backend API"
+            npm install --legacy-peer-deps
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
